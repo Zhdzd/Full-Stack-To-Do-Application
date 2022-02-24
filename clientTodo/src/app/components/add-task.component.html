@@ -1,0 +1,49 @@
+
+<br>
+<br>
+<div class="container-sm">
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="form" (ngSubmit)="processForm()">
+        <table >
+          <tr>
+            <td>User Name:</td>
+            <td><input type="text" formControlName="userName"></td>
+          </tr>
+          <tr>
+            <td>Task Name:</td>
+            <td><input type="text" formControlName="taskName"></td>
+          </tr>
+          <tr>
+            <td>Priority:</td>
+            <td>
+              <select formControlName="priority">
+                <!-- <option *ngFor="let p of priorities" value="{{p}}">{{p}}</option>*ngFor="let p of priorities" -->
+                <option value="low" selected>Low</option>
+                <option value="med" selected>Med</option>
+                <option value="high" selected>High</option>
+              </select>
+
+            </td>
+          </tr>
+          <tr>
+            <td>Due Date:</td>
+            <input type="date" formControlName="dueDate">
+          </tr>
+
+          <br>
+
+          <tr>
+            <td>
+              <button type="submit" class="btn btn-primary">Add Task</button>
+            </td>
+
+            <td align="right">
+              <button type="back" routerLink="/tasks" class="btn btn-warning">Back</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>
